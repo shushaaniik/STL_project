@@ -1,8 +1,8 @@
-#Word occupancy
+# Word occupancy
 
 **Counts occupancy of each word in given string.**
 
-##Usage:
+## Usage:
 
 ```
 
