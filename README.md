@@ -7,11 +7,9 @@
 ### Usage:
 
 ```
-
 cd word_occupancy
 cmake -S . -B ./build
 cd build
 make
 ../word_occupancy
-
 ```
