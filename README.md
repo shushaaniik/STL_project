@@ -1,8 +1,10 @@
-# Word occupancy
+# STL Project
+
+## Word occupancy
 
 **Counts occupancy of each word in given string.**
 
-## Usage:
+### Usage:
 
 ```
 
