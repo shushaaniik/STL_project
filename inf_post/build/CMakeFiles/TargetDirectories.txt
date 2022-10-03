@@ -1,3 +1,0 @@
-/home/shushanik/STL_project/inf_post/build/CMakeFiles/inf_post.dir
-/home/shushanik/STL_project/inf_post/build/CMakeFiles/edit_cache.dir
-/home/shushanik/STL_project/inf_post/build/CMakeFiles/rebuild_cache.dir
