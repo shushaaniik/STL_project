@@ -7,7 +7,7 @@ project(word_occupancy)
 include_directories(include)
 
 add_executable(word_occupancy
-  src/woc_main.cpp
+  src/main.cpp
   src/print.cpp
   src/map_create.cpp
 )

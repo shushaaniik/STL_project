@@ -13,3 +13,17 @@ cd build
 make
 ../word_occupancy
 ```
+
+## Inpix-Postfix
+
+**Converts infix to postfix, and postfix to infix.**
+
+### Usage:
+
+```
+cd inf_post
+cmake -S . -B ./build
+cd build
+make
+../inf_post
+```
