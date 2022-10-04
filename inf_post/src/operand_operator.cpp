@@ -13,5 +13,5 @@ bool operand_operator(std::string& s)
 	if(is_operator(s[i]))
 	    operator_count++;
     }
-    return (operand_count == operator_count);
+    return (operand_count-operator_count == 1);
 }

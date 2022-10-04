@@ -18,6 +18,8 @@ int main()
     std::string input;
     getline(std::cin, input);
     input = no_spaces(input);
+    //std::cout << balanced(input) << std::endl;
+    //std::cout << is_valid(input) << std::endl;
     if(!(is_valid(input)))
         std::cout << "Non valid input" << std::endl;
     else
@@ -27,4 +29,5 @@ int main()
 	else
 	    std::cout << infix(input) << std::endl;
     }
+    return 0;
 }
