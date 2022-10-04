@@ -11,10 +11,8 @@ int op_priority(char c)
             break;
         case '*':
         case '/': 
+        case '%': 
             return 2;
-            break;
-        case '^': 
-            return 3;
             break;
         default:
             return -1;

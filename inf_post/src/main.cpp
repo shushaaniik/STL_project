@@ -1,18 +1,24 @@
 #include <iostream>
 #include <string>
 #include <stack>
-#include "no_num.h"
+
 #include "infix.h"
 #include "postfix.h"
 #include "is_infix.h"
 #include "is_operator.h"
 #include "balanced.h"
+#include "no_spaces.h"
+#include "right_string.h"
+#include "is_valid.h"
+#include "is_operand.h"
+#include "operand_operator.h"
 
 int main()
 {
     std::string input;
-    std::cin >> input;
-    if(!no_num(input) || !balanced(input))
+    getline(std::cin, input);
+    input = no_spaces(input);
+    if(!(is_valid(input)))
         std::cout << "Non valid input" << std::endl;
     else
     {
