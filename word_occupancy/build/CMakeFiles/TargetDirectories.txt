@@ -1,3 +1,0 @@
-/home/shushanik/STL_project/word_occupancy/build/CMakeFiles/word_occupancy.dir
-/home/shushanik/STL_project/word_occupancy/build/CMakeFiles/edit_cache.dir
-/home/shushanik/STL_project/word_occupancy/build/CMakeFiles/rebuild_cache.dir
