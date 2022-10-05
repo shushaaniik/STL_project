@@ -1,7 +1,7 @@
 #include <iostream>
 #include <unordered_map>
 #include "print.h"
-#include "map_create.h"
+#include "word_table.h"
 
 int main()
 {
@@ -10,7 +10,7 @@ int main()
 
     getline(std::cin, input);
 
-    map_create(input, umap);
+    word_table(input, umap);
     print(umap);
 
     return 0;

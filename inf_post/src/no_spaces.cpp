@@ -7,7 +7,9 @@ std::string no_spaces(std::string& input)
     for(int i = 0; i < input.size(); ++i)
     {
         if(input[i] != ' ' && input[i] != '\t')
+	{
             result.push_back(input[i]);
+	}
     }
     return result;
 }

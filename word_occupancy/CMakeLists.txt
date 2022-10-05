@@ -9,7 +9,7 @@ include_directories(include)
 add_executable(word_occupancy
   src/main.cpp
   src/print.cpp
-  src/map_create.cpp
+  src/word_table.cpp
 )
 
 set(EXECUTABLE_OUTPUT_PATH "${CMAKE_SOURCE_DIR}")
