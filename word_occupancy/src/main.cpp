@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <unordered_map>
+#include <sys/stat.h>
 #include "print.h"
 #include "word_table.h"
 
@@ -11,6 +12,15 @@ int main()
     {
         std::string file_name;
         getline(std::cin, file_name);
+        
+        struct stat s;
+        if ( lstat(file_name.c_str(), &s) == 0 ) 
+        {
+            if ( S_ISDIR(s.st_mode) )
+	    {
+                throw(1);
+	    }
+        } 
 
 	std::ifstream input_file;
 	input_file.open(file_name);
@@ -35,6 +45,9 @@ int main()
     {
         std::cout << "Couldn't open file " << s << "\n";
     }
+    catch(int x)
+    {
+        std::cout << "The input is directory\n";
+    }
     return 0;
 }
-
