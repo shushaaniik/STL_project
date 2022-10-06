@@ -1,20 +1,22 @@
 #include <iostream>
 #include "op_priority.h"
 
-int op_priority(char c)
+Operator_Priority op_priority(char c)
 {
     switch(c)
     {
         case '+':
         case '-':
-            return 1;
+            return first;
             break;
         case '*':
         case '/': 
+	    return second;
+	    break;
         case '%': 
-            return 2;
+            return third;
             break;
         default:
-            return -1;
+            return not_operator;
     }
 }

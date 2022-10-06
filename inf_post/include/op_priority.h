@@ -1,3 +1,3 @@
-//enum op_priority{ +, - = 1, *, /, % = 2 };
+enum Operator_Priority { not_operator, first, second, third };
 
-int op_priority(char);
+Operator_Priority op_priority(char);
