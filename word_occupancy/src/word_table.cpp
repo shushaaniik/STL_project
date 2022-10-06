@@ -14,9 +14,13 @@ void word_table(std::string& s, std::unordered_map<std::string, int>& um)
             i++;
         }
         if(! um.count(temp))
+	{
             um[temp] = 1;
+	}
         else 
+	{
             um[temp]++;
+	}
         i++;
     }
 }
