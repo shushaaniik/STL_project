@@ -2,7 +2,7 @@
 
 ## Word occupancy
 
-**Counts occupancy of each word in given string.**
+**Counts occupancy of each word in given file.**
 
 ### Usage:
 
@@ -12,6 +12,7 @@ cmake -S . -B ./build
 cd build
 make
 ../word_occupancy
+<path>
 ```
 
 ## Inpix-Postfix
