@@ -1,7 +1,7 @@
 #include <iostream>
-#include "word_table.h"
+#include "make_word_table.h"
 
-void word_table(std::string& s, std::unordered_map<std::string, int>& um)
+void make_word_table(std::string& s, std::unordered_map<std::string, int>& um)
 {
     std::size_t length = s.size();
     std::size_t i = 0;
@@ -24,4 +24,3 @@ void word_table(std::string& s, std::unordered_map<std::string, int>& um)
         i++;
     }
 }
-

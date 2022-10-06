@@ -3,7 +3,7 @@
 #include <unordered_map>
 #include <sys/stat.h>
 #include "print.h"
-#include "word_table.h"
+#include "make_word_table.h"
 
 int main()
 {
@@ -37,7 +37,7 @@ int main()
                 std::getline (input_file, temp);
 		sentence += temp;
             }
-            word_table(sentence, umap);
+            make_word_table(sentence, umap);
             print(umap);
 	}
     }
