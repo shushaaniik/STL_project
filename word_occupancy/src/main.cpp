@@ -8,14 +8,22 @@
 int main(int argc, char** argv)
 {
     std::unordered_map<std::string, int> umap;
+    
+    if(! argv[1])
+    {
+        std::cerr << "No argument is passed\n";
+        return 1;
+    }
+
     std::string file_name = argv[1];
-     
+
     struct stat s;
     if ( lstat(file_name.c_str(), &s) == 0 ) 
     {
         if ( S_ISDIR(s.st_mode) )
         {
-           throw std::runtime_error{"The input is a directory\n"};
+	    std::cerr << "The input is a directory\n";
+	    return 1;
 	}
     } 
 
@@ -24,7 +32,8 @@ int main(int argc, char** argv)
     std::string sentence;
     if (! input_file.is_open() ) 
     {
-        throw std::runtime_error{"Couldn't open file\n"};
+	std::cerr << "Couldn't open file\n";
+        return 1;
     }
     else
     {

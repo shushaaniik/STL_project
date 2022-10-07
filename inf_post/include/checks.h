@@ -1,5 +1,5 @@
 #ifndef CHECKS_H
-#define CHECKS_h
+#define CHECKS_H
 
 #include <string>
 

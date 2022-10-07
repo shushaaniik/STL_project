@@ -1,9 +1,9 @@
 #include <iostream>
 #include "op_priority.h"
 
-Operator_Priority op_priority(char c)
+Operator_Priority op_priority(char op)
 {
-    switch(c)
+    switch(op)
     {
         case '+':
         case '-':
@@ -17,6 +17,6 @@ Operator_Priority op_priority(char c)
             return third;
             break;
         default:
-            return not_operator;
+            throw(op);
     }
 }

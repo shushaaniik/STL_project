@@ -13,13 +13,21 @@ int main()
     input = no_spaces(input);
     if(!(is_valid(input)))
     {
-        throw std::runtime_error{"Invalid input"};;
+	std::cerr << "Invalid input\n";
+	return 1;
     }
     else
     {
         if(is_infix(input))
         {
-            std::cout << convert_to_postfix(input) << std::endl;
+	    try
+	    {
+                std::cout << convert_to_postfix(input) << std::endl;
+	    }
+	    catch(char)
+	    {
+		std::cerr << "Wrong use of program\n";
+	    }
         }
         else
         {

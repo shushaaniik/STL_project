@@ -47,8 +47,19 @@ std::string convert_to_postfix(std::string& infix)
     for(int i = 0; i < infix.size(); ++i)
     {
         char current = infix[i];
+
+        /*int current_priority;
+
+	if(is_operator(current))
+	{
+	    current_priority = op_priority(current);
+	}
+	else
+	{
+	    current_priority = -1;
+	}*/
         
-	if((current >= 'a' && current <= 'z') || (current >= 'A' && current <= 'Z'))
+	if(is_operand(current))
 	{
             result += current;
 	}
@@ -60,6 +71,7 @@ std::string convert_to_postfix(std::string& infix)
                 s.push(current);
 	    }
 	    else
+	    {
 	        if(current == ')')
 	        {
 	            while(s.top() != '(')
@@ -72,6 +84,17 @@ std::string convert_to_postfix(std::string& infix)
 	        
 	        else
 		{
+		    /*int top_priority;
+
+		    if(is_operator(s.top()))
+                    {
+                        top_priority = op_priority(current);
+                    }
+                    else
+                    {
+                        top_priority = -1;
+                    }*/
+		    
                     while(!s.empty() && op_priority(current) > op_priority(s.top()))
 		    {
 		        result += s.top();
@@ -79,6 +102,7 @@ std::string convert_to_postfix(std::string& infix)
 		    }
 		    s.push(current);
 		}
+	    }
 	}
     }
 
