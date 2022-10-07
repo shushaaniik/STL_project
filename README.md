@@ -11,8 +11,7 @@ cd word_occupancy
 cmake -S . -B ./build
 cd build
 make
-../word_occupancy
-<path>
+../word_occupancy <path>
 ```
 
 ## Inpix-Postfix
