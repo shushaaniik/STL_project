@@ -72,7 +72,7 @@ std::string convert_to_postfix(std::string& infix)
 	        
 	        else
 		{
-                    while(!s.empty() && op_priority(current) < op_priority(s.top()))
+                    while(!s.empty() && op_priority(current) > op_priority(s.top()))
 		    {
 		        result += s.top();
 			s.pop();

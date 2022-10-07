@@ -8,30 +8,23 @@
 
 int main()
 {
-    try
+    std::string input;
+    getline(std::cin, input);
+    input = no_spaces(input);
+    if(!(is_valid(input)))
     {
-        std::string input;
-        getline(std::cin, input);
-        input = no_spaces(input);
-        if(!(is_valid(input)))
+        throw std::runtime_error{"Invalid input"};;
+    }
+    else
+    {
+        if(is_infix(input))
         {
-            throw(input);
+            std::cout << convert_to_postfix(input) << std::endl;
         }
         else
         {
-            if(is_infix(input))
-	    {
-	        std::cout << convert_to_postfix(input) << std::endl;
-	    }
-	    else
-	    {
-	        std::cout << convert_to_infix(input) << std::endl;
-	    }
-        }
-    }
-    catch(std::string s)
-    {
-        std::cout << "Non valid input\n";
+            std::cout << convert_to_infix(input) << std::endl;
+	}
     }
     return 0;
 }

@@ -3,8 +3,8 @@
 
 bool is_valid(std::string& s)
 {
-    return (!(!is_right_string(s) || !is_balanced(s) 
-            || !operand_operator(s) || is_operator(s[0])));
+    return !(!is_right_string(s) || !is_balanced(s) 
+            || !operand_operator(s) || is_operator(s[0]));
 }
 
 bool operand_operator(std::string& s)
@@ -21,7 +21,7 @@ bool operand_operator(std::string& s)
 	    operator_count++;
 	}
     }
-    return (operand_count-operator_count == 1);
+    return operand_count-operator_count == 1;
 }
 
 bool is_right_string(std::string& s)
@@ -39,17 +39,17 @@ bool is_right_string(std::string& s)
 
 bool is_infix(std::string& s)
 {
-    return !is_operator(s[s.size()-1]);
+    return !is_operator(s.back());
 }
 
 bool is_operator(char c)
 {
-    return (c == '+' || c == '-' || c == '*' || c == '/' || c == '%');
+    return c == '+' || c == '-' || c == '*' || c == '/' || c == '%';
 }
 
 bool is_operand(char c)
 {
-    return((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
 }
 
 bool is_balanced(std::string& s)
