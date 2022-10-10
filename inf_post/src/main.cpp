@@ -27,6 +27,7 @@ int main()
 	    catch(char)
 	    {
 		std::cerr << "Wrong use of program\n";
+		return 1;
 	    }
         }
         else

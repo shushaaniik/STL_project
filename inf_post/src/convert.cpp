@@ -48,8 +48,6 @@ std::string convert_to_postfix(std::string& infix)
     {
         char current = infix[i];
 
-        /*int current_priority;
-
 	if(is_operator(current))
 	{
 	    current_priority = op_priority(current);
@@ -57,7 +55,7 @@ std::string convert_to_postfix(std::string& infix)
 	else
 	{
 	    current_priority = -1;
-	}*/
+	}
         
 	if(is_operand(current))
 	{
@@ -84,17 +82,6 @@ std::string convert_to_postfix(std::string& infix)
 	        
 	        else
 		{
-		    /*int top_priority;
-
-		    if(is_operator(s.top()))
-                    {
-                        top_priority = op_priority(current);
-                    }
-                    else
-                    {
-                        top_priority = -1;
-                    }*/
-		    
                     while(!s.empty() && op_priority(current) > op_priority(s.top()))
 		    {
 		        result += s.top();
